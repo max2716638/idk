@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main page</title>
+        <style>
+            body {
+                background-color: #00FFFF;
+                font-family: sans-serif;
+                padding: 40px;
+            }
+            input, button {
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+
+            button {
+                background-color: aquamarine;
+                border: none;
+                cursor: pointer;
+            }
+            .highlight {
+                color: #ffff;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Main Page</h1>
+        <input type="text" id="pageInput" placeholder="Type something here. . .">
+        <button type="button" id="goBtn">Go!</button>
+
+        <script>
+            const inputField = document.getElementById("pageInput");
+            const button = document.getElementById("goBtn");
+
+            button.addEventListener("click", () => {
+                alert("Button pressed you type : " + inputField.value);
+                const typedtext = inputField.value.trim().toLowerCase();
+
+                if (typedtext === "about") {
+                    alert("Redirecting to about");
+                    window.location.href = "index.html";
+                } else {
+                    alert("You typed '" + typedtext + "' - you need to type about");
+                }
+            });
+        </script>
+    </body>
+</html>

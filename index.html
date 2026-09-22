@@ -1,0 +1,32 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        ,<title>About</title>
+    </head>
+    <body>
+        <h1>About:</h1>
+        <h1>This is <span class="magic">Max's</span> websites</h1>
+        <p>Hello there! thanks for testing my website, i know this is first time but come on its already fine</p>
+        <button type="button" id="smash">Smash this</button>
+        <button>
+            <span>yo</span>
+        </button>
+        <a href="idk.html">Back to Home</a>
+        <script>
+            const button = document.getElementById("smash");
+
+            button.addEventListener("click", () => {
+                alert("Button pressed you type : " + inputField.value);
+                const typedtext = inputField.value.trim().toLowerCase();
+
+                if (typedtext === "home") {
+                    alert("Redirecting to home");
+                    window.location.href = "idk.html";
+                } else {
+                    alert("You typed '" + typedtext + "' - you need to type about");
+                }
+            });
+        </script>
+    </body>
+</html>
+
